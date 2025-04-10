@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  background: url('https://www.transparenttextures.com/patterns/blue-fabric.png') repeat;
+  background-color: #0f2c52;
+  font-family: 'Libre Baskerville', serif;
+  color: #3b2f2f;
+  padding: 20px;
+  position: relative;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(255, 248, 220, 0.8);
+  border: 40px solid transparent;
+  border-image: url('https://upload.wikimedia.org/wikipedia/commons/1/19/Parchment_texture_scroll_border.png') 40 fill stretch;
+  border-radius: 10px;
+  position: relative;
+  animation: burn 3s infinite alternate;
+}
+
+header::after, footer::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Seal_of_Henry_VIII.svg/1200px-Seal_of_Henry_VIII.svg.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.6;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #b8860b;
+  font-family: 'MedievalSharp', cursive;
+  text-shadow: 2px 2px #fff8dc;
+}
+
+h2, h3 {
+  color: #6b4226;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media(min-width: 768px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.card {
+  background: rgba(255, 255, 240, 0.95);
+  border: 2px solid #daa520;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 40px;
+  height: 40px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/7/70/Flourish_icon_gold.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Wax_seal_red.svg/1024px-Wax_seal_red.svg.png') no-repeat center center;
+  background-size: contain;
+  bottom: -20px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.button {
+  background: #b8860b;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #a67c00;
+}
+
+.scroll-box {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.muted {
+  color: #777;
+}
+
+.candle {
+  position: fixed;
+  width: 80px;
+  height: 150px;
+  background: url('https://i.pinimg.com/originals/72/1d/ba/721dba7dbf38e80b529099a479d69786.gif') no-repeat center center;
+  background-size: contain;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+audio {
+  display: none;
+}
+
+@keyframes burn {
+  0% { box-shadow: 0 0 15px 5px rgba(255, 102, 0, 0.3); }
+  100% { box-shadow: 0 0 25px 10px rgba(255, 51, 0, 0.5); }
+}
